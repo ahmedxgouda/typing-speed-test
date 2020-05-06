@@ -1,0 +1,106 @@
+:root {
+  --almostBlack: #0B132B;
+  --textWhite: floralwhite;
+  --lightGreen: #22333B;
+  --lightGrey: #546a7b;
+}
+
+body {
+  font-family: 'Balsamiq Sans', cursive;
+  margin: 0;
+  font-size: 18px;
+}
+
+*, :before, :after {
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 5% 4%;
+  grid-gap: 1rem;
+}
+
+.header, .container, .results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  justify-content: center;
+}
+
+.header .img {
+  width: 50%;
+  justify-self: flex-end;
+}
+
+.header .img img {
+  width: 100%;
+}
+
+header .container {
+  background-color: var(--almostBlack);
+  color: var(--textWhite);
+}
+
+main .container {
+  background-color: var(--lightGreen);
+  color: var(--textWhite);
+}
+
+main .container .main div {
+  margin: 1% 0 0.5% 0;
+}
+
+.test-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.test-area .test-text {
+  background-color: var(--lightGrey);
+  padding: 0.5% 1%;
+  justify-self: center;
+  font-family: sans-serif;
+}
+
+.test-area .test-field {
+  width: 100%;
+}
+
+.test-area .test-field .text-area {
+  font-size: 1rem;
+  font-family: sans-serif;
+  width: 100%;
+  padding: 2% 1%;
+  outline: none;
+  border: 5px solid var(--almostBlack);
+  border-radius: 10px;
+  resize: none;
+  transition: box-shadow 1s, outline 500ms linear;
+}
+
+.test-area .test-field .text-area:focus {
+  box-shadow: 1px 1px 20px 2px rgba(0, 0, 0, 0.2);
+}
+
+.results {
+  grid-gap: 0.5rem;
+}
+
+.results > div {
+  text-align: center;
+}
+
+@media (max-width: 608px) {
+  .header .text {
+    text-align: center;
+  }
+  .header .img {
+    justify-self: center;
+  }
+}
+
+@media (min-width: 950px) {
+  .test-area .test-field, .test-text {
+    width: 70%;
+  }
+}
