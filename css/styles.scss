@@ -75,6 +75,20 @@ main .container {
             text-align: center;
       }
 }
+.reset-div {
+      text-align: center;
+}
+.btn {
+      text-decoration: none;
+      background-color: var(--almostBlack);
+      padding: 1% 5%;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 1em;
+      border-radius: 10px;
+      &:hover {
+            background-color: rgba(11, 19, 43, 0.8)
+      }
+}
 @media (max-width: 608px) {
       .header {
             .text {
