@@ -74,7 +74,7 @@ main .container .main div {
   padding: 2% 1%;
   outline: none;
   resize: none;
-  transition: box-shadow 1s, border 500ms ease;
+  transition: box-shadow 1s, border-width 500ms ease, border-style 500ms ease;
 }
 
 .test-area .test-field .text-area:focus {
@@ -89,6 +89,10 @@ main .container .main div {
 
 .results > div {
   text-align: center;
+}
+
+.results > div p {
+  font-size: 1.5em;
 }
 
 .reset-div {
