@@ -32,7 +32,10 @@
     "gulp-terser": "^1.2.0",
     "gulp-uglify": "^3.0.2",
     "gulp-usemin": "^0.3.30",
-    "lite-server": "^2.5.4"
+    "js-yaml": "^3.13.1",
+    "lite-server": "^2.5.4",
+    "lodash.template": "^4.5.0",
+    "tunnel-agent": "^0.6.0"
   },
   "babel": {
     "presets": [
