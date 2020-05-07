@@ -94,6 +94,6 @@ function reset(e) {
       textArea.style.borderColor = "#0B132B";
 };
 // Adding Events to do the job
-textArea.addEventListener('keypress', start, false);
+textArea.addEventListener('keydown', start, false);
 textArea.addEventListener('keyup', spellCheck, false);
 resetBtn.addEventListener('click', reset, false);

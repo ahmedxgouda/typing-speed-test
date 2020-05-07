@@ -4,7 +4,9 @@
   "description": "Test Your Speed Here",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run lite",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server"
   },
   "repository": {
     "type": "git",
@@ -29,7 +31,8 @@
     "gulp-rev": "^9.0.0",
     "gulp-terser": "^1.2.0",
     "gulp-uglify": "^3.0.2",
-    "gulp-usemin": "^0.3.30"
+    "gulp-usemin": "^0.3.30",
+    "lite-server": "^2.5.4"
   },
   "babel": {
     "presets": [
