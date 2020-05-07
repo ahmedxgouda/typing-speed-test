@@ -20,7 +20,7 @@ function zeroBeforeOneToNine(time) {
             time = "0" + time;
       }
       return time;
-} 
+}; 
 // To run the countup timer
 function runTheTimer() {
       // What appears in webpage
@@ -35,7 +35,7 @@ function runTheTimer() {
       timer[1] = Math.floor((timer[3]/100) - (timer[0] * 60));
       // Convert all units to milli-seconds to get the current milli second
       timer[2] = Math.floor((timer[3] - (timer[1] * 100) - (timer[0] * 6000)));
-}
+};
 // Check entered text if matches the origin text or not
 function spellCheck() {
       textEntered = textArea.value;
@@ -62,13 +62,13 @@ function spellCheck() {
                   textArea.style.borderColor = "#FF6B6B";
             }
       }
-}
+};
 // Speed Function
 function speedResult() {
       // You can get the equation from google but you must convert all units to milli-second and combine them first
       let currentSpeed = Math.floor((originTextMatch.length/5)/((timer[1]/60)+(timer[0])+(timer[2])/6000));
       speed.innerHTML = currentSpeed + " WPM";
-}
+};
 // Start when user starts typing
 function start() {
       // Get the length
@@ -78,7 +78,7 @@ function start() {
             timeInterval = setInterval(runTheTimer, 10);
             speedInterval = setInterval(speedResult, 200);
       }
-}
+};
 // Reset All
 function reset(e) {
       e.preventDefault();      
@@ -92,7 +92,7 @@ function reset(e) {
       textArea.removeAttribute("readonly");
       textArea.value = "";
       textArea.style.borderColor = "#0B132B";
-}
+};
 // Adding Events to do the job
 textArea.addEventListener('keypress', start, false);
 textArea.addEventListener('keyup', spellCheck, false);

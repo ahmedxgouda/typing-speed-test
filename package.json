@@ -1,0 +1,39 @@
+{
+  "name": "typing-speed-tester",
+  "version": "1.0.0",
+  "description": "Test Your Speed Here",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AhmedXGoda/typing-speed-test.git"
+  },
+  "author": "Ahmed Goda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AhmedXGoda/typing-speed-test/issues"
+  },
+  "homepage": "https://github.com/AhmedXGoda/typing-speed-test#readme",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-flatmap": "^1.0.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^3.4.0",
+    "gulp-rev": "^9.0.0",
+    "gulp-terser": "^1.2.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-usemin": "^0.3.30"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  }
+}
