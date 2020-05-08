@@ -65,7 +65,7 @@ function spellCheck() {
 };
 // Speed Function
 function speedResult() {
-      // You can get the equation from google but you must convert all units to milli-second and combine them first
+      // You can get the equation from google but you must convert all units to minute and combine them first
       let currentSpeed = Math.floor((originTextMatch.length/5)/((timer[1]/60)+(timer[0])+(timer[2])/6000));
       speed.innerHTML = currentSpeed + " WPM";
 };
@@ -77,8 +77,7 @@ function start() {
             timerRunning = true;
             // Set the intervals         
             timeInterval = setInterval(runTheTimer, 10);
-            speedInterval = setInterval(speedResult, 200);
-            // spellCheck()
+            speedInterval = setInterval(speedResult, 200);            
       }
 };
 // Reset All
