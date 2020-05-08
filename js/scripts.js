@@ -99,7 +99,7 @@ function reset(e) {
 // Adding Events to do the job
 textArea.addEventListener('keypress', start, false);
 textArea.addEventListener('keydown', function(e) {
-      if (window.innerWidth <= 768) {
+      if (e.which === 229) {
             start();
       }
 }, false);
