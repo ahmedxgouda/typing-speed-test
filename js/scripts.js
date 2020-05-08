@@ -13,7 +13,7 @@ var textEntered;
 var originTextMatch;
 var speedInterval;
 var errorsCount = 0;
-var errorsInterval;
+var timerRunning = false;
 // Adding Zero to numbers from 1 to 9
 function zeroBeforeOneToNine(time) {
       if (time <= 9) {
@@ -73,15 +73,18 @@ function speedResult() {
 function start() {
       // Get the length
       let textEnteredLength = textArea.value.length;
-      if (textEnteredLength === 0) {   
+      if (textEnteredLength === 0 &!timerRunning) {   
+            timerRunning = true;
             // Set the intervals         
             timeInterval = setInterval(runTheTimer, 10);
             speedInterval = setInterval(speedResult, 200);
+            // spellCheck()
       }
 };
 // Reset All
 function reset(e) {
-      e.preventDefault();      
+      e.preventDefault();
+      timerRunning = false;            
       clearInterval(timeInterval);
       clearInterval(speedInterval);
       errorsCount = 0;
@@ -94,6 +97,11 @@ function reset(e) {
       textArea.style.borderColor = "#0B132B";
 };
 // Adding Events to do the job
-textArea.addEventListener('keydown', start, false);
+textArea.addEventListener('keypress', start, false);
+textArea.addEventListener('keydown', function(e) {
+      if (window.innerWidth <= 700) {
+            start();
+      }
+}, false);
 textArea.addEventListener('keyup', spellCheck, false);
 resetBtn.addEventListener('click', reset, false);
